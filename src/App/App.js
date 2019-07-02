@@ -11,12 +11,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Scatt Surprise</h1>
-        <button className="btn btn-secondary">Test Button</button>
-        <Auth />
-        <br />
-        <Home />
-        <br />
         <MyNav />
       </div>
     );
