@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
- import './MyNavbar.scss';
+import './MyNavbar.scss';
 
- class MyNavbar extends React.Component {
+class MyNavbar extends React.Component {
   static propTypes = {
     authed: PropTypes.bool.isRequired,
   }
 
-   logMeOut = (e) => {
+  logMeOut = (e) => {
     e.preventDefault();
     firebase.auth().signOut();
   }
 
-   render() {
+  render() {
     const { authed } = this.props;
     return (
       <div className="MyNavbar">
@@ -25,7 +25,7 @@ import 'firebase/auth';
             <span className="navbar-toggler-icon"></span>
           </button>
 
-           <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
             </ul>
             <form className="form-inline my-2 my-lg-0">
@@ -42,4 +42,4 @@ import 'firebase/auth';
   }
 }
 
- export default MyNavbar;
+export default MyNavbar;
