@@ -4,10 +4,12 @@ import './EditScat.scss';
 
 class EditScat extends React.Component {
   render() {
+    const editId = this.props.match.params.id;
+
     return (
       <div className="EditScat">
         <h1>EditScat</h1>
-        <button className="btn btn-secondary" onClick={this.loginClickEvent}>Login with Google</button>
+        <h2>The Edit Id is {editId}</h2>
       </div>
     );
   }

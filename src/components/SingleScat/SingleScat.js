@@ -7,7 +7,6 @@ class SingleScat extends React.Component {
     return (
       <div className="SingleScat">
         <h1>SingleScat</h1>
-        <button className="btn btn-secondary" onClick={this.loginClickEvent}>Login with Google</button>
       </div>
     );
   }
