@@ -11,13 +11,17 @@ const getScats = uid => new Promise((resolve, reject) => {
       if (res.data !== null) {
         Object.keys(res.data).forEach((scatKey) => {
           res.data[scatKey].id = scatKey;
-          console.error(scatKey[res.data]);
           scatsAr.push(res.data[scatKey]);
         });
       }
       resolve(scatsAr);
     })
     .catch((err => reject(err)));
-})
+});
 
-export default { getScats };
+const deleteScat = scatId => Axios.delete(`${firebaseURL}/scats/${scatId}.json`);
+
+export default {
+  getScats,
+  deleteScat,
+};
