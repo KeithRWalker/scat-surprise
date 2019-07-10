@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import './ScatCard.scss';
 
 import scatShape from '../../helpers/propz/scatShape';
@@ -18,6 +19,7 @@ class ScatCard extends React.Component {
 
   render() {
     const { scat } = this.props;
+    const singleLink = `/scat/${scat.id}`;
     return (
       <div className="ScatCard card col-4 bg-dark text-light">
         <div className="card-body">
@@ -31,6 +33,7 @@ class ScatCard extends React.Component {
                 <br />
                 Suspected Animal: {scat.animal}
               </div>
+              <Link className="btn btn-success col" to={singleLink}>View</Link>
               <button className="btn btn-danger" onClick={this.deleteMe}>delete</button>
           </div>
         </div>
