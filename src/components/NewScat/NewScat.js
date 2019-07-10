@@ -13,7 +13,6 @@ const defaultScat = {
   color: '',
   sampleName: '',
   animal: '',
-  uid: '',
 };
 
 class NewScat extends React.Component {
